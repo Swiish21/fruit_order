@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pineapple</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body oncontextmenu="return false" class="snippet-body">
+
+  <div class="d-flex justify-content-center align-items-center container px-2">
+    <div class="card">
+      <div class="top d-flex flex-row align-items-center">
+        <h6 class="mb-0 mr-2">One Expensive Pineapple</h6>
+      </div>
+      <div class="middle">
+        <img src="./product.png" width="150" class="mt-3" />
+        <h5>Pineapple Green Packham</h5>
+        <span>Each - approx 1.2KG (100/= Ksh)</span>
+      </div>
+      <div class="bottom d-flex flex-row justify-content-center">
+        <div class="input-group mb-3">
+          <span class="input-group-text" onclick="updateTotalPrice(-1)">-</span>
+          <input id="pineappleQuantity" type="text" class="form-control" value="1" readonly />
+          <span class="input-group-text" onclick="updateTotalPrice(1)">+</span>
+        </div>
+        <button id="payButton" class="intaSendPayButton" data-amount="" data-currency="KES">
+          Pay Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/intasend-inlinejs-sdk@3.0.4/build/intasend-inline.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
